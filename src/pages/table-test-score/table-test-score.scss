@@ -1,0 +1,76 @@
+page-table-test-score {
+    .content{
+        .segment{
+            .segment-button{
+                border-radius: 0;
+                border-color: #16367b;
+                color: #16367b;
+                font-weight: bold;
+            }
+            .segment-button.segment-activated {
+                color: #fff !important;
+                background-color: #16367b;
+                opacity: 1;
+                -webkit-transition: 100ms all linear;
+                transition: 100ms all linear;
+            }
+        }
+        .score-table{
+            background: #fff;
+            .data-null{
+                p{
+                    margin: 0;
+                    padding: 10px;
+                    color: #16367b;
+                    background: #fff;
+                }
+            }
+            .title-table{
+                border-bottom: 1px solid #ccc;
+                .title-score{
+                    padding: 0px !important;
+                    .col{
+                        border-left: 1px solid #ccc;
+                    }
+                }
+                .col{
+                    text-align: center;
+                    padding: 8px 5px;   
+                    color: #16367b;
+                    font-weight: 500;
+                    border-left: 1px solid #ccc;
+                }
+            }
+            .score-detail{
+                border-bottom: 1px solid #ccc;
+                .title-score-detail{
+                    padding: 0px !important;
+                    .col{
+                        border-left: 1px solid #ccc;
+                    }
+                }
+                .col{
+                    text-align: center;
+                    border-left: 1px solid #ccc;
+                }
+                .subject{
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+            .result{
+                .col{
+                    text-align: center; 
+                    background: #16367b;
+                    font-size: 13px;
+                    color: #fff;
+                }
+                .xep-loai{
+                    border-Top: 1px solid #ccc;
+                }
+                .hanh-kiem{
+                    border-left: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}

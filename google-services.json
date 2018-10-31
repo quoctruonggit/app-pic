@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "608951268308",
+    "firebase_url": "https://picedu-46687.firebaseio.com",
+    "project_id": "picedu-46687",
+    "storage_bucket": "picedu-46687.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608951268308:android:7818abd0199fc8dd",
+        "android_client_info": {
+          "package_name": "pic.edu.vn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608951268308-gho7h2diok3q472i3ju5cq5aj2nl29t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzF0B0AL2bw5Ab3H93tcvaAaPKev8Bdz0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

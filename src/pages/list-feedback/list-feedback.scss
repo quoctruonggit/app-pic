@@ -1,0 +1,37 @@
+page-list-feedback {
+    .content{
+        .list{
+            .item{
+                padding: 0;
+                background: #f7f7f7;
+                
+                .item-inner{
+                    padding: 0;
+                    .label{
+                        margin: 10px;
+                        color: #5a5a5a;
+                        h2{
+                            font-weight: 500;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            } 
+            .unread{
+                background: #fff;
+                .label{
+                    color: #16367b !important;
+                }
+            }
+        }
+        .add-post{
+            border-radius: 50%;
+            background: red;
+            z-index: 999;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+        }
+    }
+}

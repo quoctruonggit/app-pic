@@ -1,0 +1,121 @@
+page-feedback-detail {
+    .header{
+        .toolbar-ios ion-title {
+            padding: 0 10% 1px;
+        }
+    }
+    .content{
+        .scroll-content{
+            padding: 0 5px 10px !important;
+            .receive{
+                margin-top: 7px;
+                display: flex;
+                .avatar{
+                    display: inline-block;
+                    margin-top: auto;
+                    img{
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        background: #fff;
+                    }
+                }
+                .contents-inbox{
+                    display: inline-block;
+                    width: 80%;
+                    margin-left: 5px;
+                    .content-detail{
+                        width: fit-content;
+                        padding: 7px 10px;
+                        margin-bottom: 2px;
+                        background: #fff;
+                        border-radius: 0px 15px 15px 0px;
+                    }
+                    .inbox{
+                        border-radius: 15px !important;
+                    }
+                }
+            }
+            .receive:first-child{
+                .contents-inbox{
+                    .content-detail{
+                        border-radius: 15px 15px 15px 0px;
+                    }
+                }
+            }
+            .receive:last-child{
+                .contents-inbox{
+                    .content-detail{
+                        border-radius: 0px 15px 15px 15px;
+                    }
+                }
+            }
+            .send{
+                margin-top: 7px;
+                display: flex;
+                .contents-inbox-send{
+                    display: inline-block;
+                    width: 80%;
+                    
+                    margin-left: auto;
+                    .content-detail-send{
+                        margin-left: auto;
+                        width: fit-content;
+                        padding: 7px 10px;
+                        margin-bottom: 1px;
+                        background: #3578e5;
+                        border-radius: 15px 0px 0px 15px;
+                        color: #fff;
+                    }
+                    
+                    .inbox{
+                        border-radius: 15px !important;
+                    }
+                }
+            }
+            .send:first-child{
+                .contents-inbox-send{
+                    .content-detail-send{
+                        border-radius: 15px 15px 0px 15px;
+                    }
+                }
+            }
+            .send:last-child{
+                .contents-inbox-send{
+                    .content-detail-send{
+                        border-radius: 15px 0px 15px 15px;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .row{
+            .col{
+                display: flex;
+                .input{
+                    .text-input{
+                        margin: 10px 5px;
+                    }
+                }
+                .button{
+                    border: none;
+                    height: auto;
+                    margin: auto;
+                    border: none;
+                    height: auto;
+                    .button-inner{
+                        .icon{
+                            padding: 0;
+                            font-size: 35px;
+                        }
+                    }
+                }
+                .button-outline.activated{
+                    background: #fff;
+                    color: #3578e5;
+                }
+            }
+        }
+    }
+}

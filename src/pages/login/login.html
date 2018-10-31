@@ -1,0 +1,31 @@
+
+<ion-content class="content-page" >
+  <div class="logo">
+    <img src="assets/imgs/logo-nen-01.png" alt="">
+  </div>
+  <div class="login-input" >
+    <ion-input type="text" [(ngModel)]="user.email" placeholder="Tài khoản" class="text-input"></ion-input>
+  </div>
+  <div class="login-input">
+    <ion-input type="password" [(ngModel)]="user.password" placeholder="Mật khẩu"></ion-input>
+  </div>
+
+  <div class="forgot-pass">
+    <p (click)="openForgotPassPage()">Quên mật khẩu?</p>
+  </div>
+  <div class="btn-login">
+    <button ion-button style="display: block; width: 80%; margin: auto; " (click)="openMainPage()">Đăng nhập</button>
+  </div>
+  <!-- <div class="text-or">
+    <p class="line">OR</p>
+  </div>
+
+  <div class="text-or">
+    <p>Don't have an account? <b (click)="openSingUpPage()">Sing up</b></p>
+  </div> -->
+
+  
+</ion-content>
+<ion-footer>
+  <p>HỆ THỐNG GIÁO DỤC THÁI BÌNH DƯƠNG<br>Pacific College</p>
+</ion-footer>

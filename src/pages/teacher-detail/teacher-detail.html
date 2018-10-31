@@ -1,0 +1,107 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chi tiết giáo viên</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid-avatar">
+    <ion-row>
+      <!-- <ion-col col-3>
+        <div class="div-avatar">
+          <ion-avatar item-start>
+            <img class="img-avatar" src="assets/imgs/teacher2.jpg">
+          </ion-avatar>
+        </div>
+      </ion-col> -->
+      <ion-col col-12 class="col-name">
+        <div>
+          <p>Giáo viên: {{teacher.tencanbo}}</p>
+          <p>Chủ nhiệm lớp: {{teacher.tenlop}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  
+  <div class="info-teacher">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>Ngày sinh:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>{{teacher.namsinh | date:"dd/MM/yyyy"}}</span>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>giới tính:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>Nữ</span>
+          </ion-col>
+        </ion-row> -->
+        <!-- <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>Chức vụ:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>Trưởng bộ môn</span>
+          </ion-col>
+        </ion-row> -->
+        <!-- <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>Khoa/Tổ:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>Vật lý</span>
+          </ion-col>
+        </ion-row> -->
+        <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>SĐT:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>{{teacher.dienthoai}}</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>Email:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>{{teacher.email}}</span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-4 class="d-right">
+            <span>Địa chỉ:</span>
+          </ion-col>
+          <ion-col col-8 class="d-left">
+            <span>{{teacher.diachi}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="div-btn">
+      <button block ion-button (click)="openTeacherWorkCalendar(teacher.canbo_id)">Xem lịch làm việc</button>
+    </div>
+    <div *ngIf="role == 'giao-vien'" class="div-btn">
+      <button block ion-button (click)="openHopThu()">Quản lý phản hồi</button>
+    </div>
+    <div *ngIf="role == 'giao-vien'" class="div-btn">
+      <button block ion-button (click)="changePassword()">Đổi mật khẩu</button>
+    </div>
+    <div *ngIf="role == 'giao-vien'" class="div-btn">
+      <button block ion-button (click)="doLogout()">Đăng xuất</button>
+    </div>
+    
+</ion-content>
+<ion-footer>
+  <p>HỆ THỐNG GIÁO DỤC THÁI BÌNH DƯƠNG<br>Pacific College</p>
+</ion-footer>

@@ -1,0 +1,59 @@
+page-main {
+    .header{
+        .icon-logout{
+            color: #16367b;
+        }
+        .toolbar-background {
+            background: #e8e8e8 !important;
+            border: none;
+        }
+        ion-icon {
+            display: inline-block;
+            font-size: 30px;
+            color: #16367b;
+            margin-left: 7px;
+        }
+    }
+    .scroll-content{
+        background: #e8e8e8;
+        .logo{
+            text-align: center;
+            margin: 15% 0;
+            img{
+                height: 150px;
+            }
+        }
+        .grid{
+            .row{
+                .col{
+                    padding: 5px;
+                    div{
+                        background: #16367b;
+                        border-radius: 5px;
+                        padding: 5px;
+                        color: #e8e8e8;
+                        text-align: center;
+                        img{
+                            height: 40px;
+                            margin-top: 10px;
+                        }
+                        p{
+                            margin: 10px 0;
+                            font-size: 16px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .footer{
+        background: #16367b;
+        text-align: center;
+        p{
+            color: #e8e8e8;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+page-list-students {
+    .content{
+        .list-ios {
+            margin: 0;
+        }
+        .list{
+            .item{
+                border-bottom: 1px solid #c8c7cc;
+                .item-inner {
+                    border-bottom: none;
+                    h2{
+                        color: #16367b;
+                    }
+                }   
+                ion-avatar img {                  
+                    object-fit: cover;
+                }
+                
+            }
+            .unread{
+                background: #fff;
+                h2{
+                    color: red !important;
+                    font-weight: 500;
+                }
+                
+            }
+            
+        }
+        
+    }
+
+    .footer{
+        background: #16367b;
+        text-align: center;
+        p{
+            color: #e8e8e8;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+}

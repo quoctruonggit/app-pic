@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Tạo bài việt</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="valueFilter">
+    <p class="title">Tiêu đề bài viết:</p>
+    <ion-input type="text" placeholder="" class="input-dagen" [(ngModel)]="data.title"></ion-input>
+  </div>
+  <div class="valueFilter">
+    <p class="title">Nội dung bài viết:</p>
+    <textarea class="text-content" name="" id=""  rows="5" [(ngModel)]="data.content"></textarea>
+  </div>
+  <div class="valueFilter">
+    <p class="title">Sẽ gửi cho phụ huynh của học sinh:</p>
+    <button ion-button class="btn-choose" full (click)="chooseStudents()">Chọn học sinh</button>
+  </div>
+  <div class="valueFilter">
+    <p class="title">Danh sách học sinh:</p>
+    <ion-col *ngFor="let p of listNameStudents" col-6>{{p.name}}, </ion-col>
+  </div>
+  <div class="valueFilter">
+    <button ion-button class="btn-choose" full (click)="send()">Gửi thông báo</button>
+  </div>
+  
+</ion-content>

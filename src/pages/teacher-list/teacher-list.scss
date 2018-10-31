@@ -1,0 +1,39 @@
+page-teacher-list {
+    .header{
+        
+        ion-icon {
+            display: inline-block;
+            font-size: 30px;
+            color: #e8e8e8;
+        }
+    }
+    .content{
+        .list-ios {
+            margin: 0;
+        }
+        .list{
+            .item{
+                border-bottom: 1px solid #c8c7cc;
+                .item-inner {
+                    border-bottom: none;
+                    h2{
+                        color: #16367b;
+                    }
+                }   
+                ion-avatar img {                  
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .footer{
+        background: #16367b;
+        text-align: center;
+        p{
+            color: #e8e8e8;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+}

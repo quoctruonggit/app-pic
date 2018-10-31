@@ -1,0 +1,230 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bảng điểm</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div>
+    <ion-segment [(ngModel)]="scoreTables">
+      <ion-segment-button value="i">
+        Học kỳ I
+      </ion-segment-button>
+      <ion-segment-button value="ii">
+        Học kỳ II
+      </ion-segment-button>
+      <ion-segment-button value="all">
+        Cả năm
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="scoreTables">
+    <div class="score-table" *ngSwitchCase="'i'">
+      <div *ngIf="tableScore != null">
+        <ion-row class="title-table">
+          <ion-col col-3>
+            Môn
+          </ion-col>
+          <ion-col col-9 class="title-score">
+            <ion-row>
+              <ion-col col-3>
+                KT 15'
+              </ion-col>
+              <ion-col col-3>
+                1 tiết
+              </ion-col>
+              <ion-col col-3>
+                Thi
+              </ion-col>
+              <ion-col col-3>
+                TB môn
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <div *ngFor="let p of tableScore1">
+          <ion-row class="score-detail" *ngIf="p.chitiet_monhoc">
+            <ion-col col-3 class="subjects">
+              {{p.tenmon}}
+            </ion-col>
+            <ion-col col-9 class="title-score-detail">
+              <ion-row>
+                <ion-col col-3>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs11">{{p.chitiet_monhoc.diem_hs11}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs12">, {{p.chitiet_monhoc.diem_hs12}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs13">, {{p.chitiet_monhoc.diem_hs13}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs14">, {{p.chitiet_monhoc.diem_hs14}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs15">, {{p.chitiet_monhoc.diem_hs15}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs16">, {{p.chitiet_monhoc.diem_hs16}}</span>
+                </ion-col>
+                <ion-col col-3>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs21">{{p.chitiet_monhoc.diem_hs21}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs22">, {{p.chitiet_monhoc.diem_hs22}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs23">, {{p.chitiet_monhoc.diem_hs23}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs24">, {{p.chitiet_monhoc.diem_hs24}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs25">, {{p.chitiet_monhoc.diem_hs25}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs26">, {{p.chitiet_monhoc.diem_hs26}}</span>
+                </ion-col>
+                <ion-col col-3>
+                  <span>{{p.chitiet_monhoc.diem_hs3}}</span>
+                </ion-col>
+                <ion-col col-3>
+                  {{p.diem_mon}}
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <ion-row class="result">
+          <ion-col col-6 class="">
+            Điểm TB HK: {{avg1 ? avg1.toFixed(1) : '-:-'}}
+          </ion-col>
+          <ion-col col-6 class="hanh-kiem">
+            Hạnh kiểm: Tốt
+          </ion-col>
+          <ion-col col-12 class="xep-loai">
+            Xếp loại học lực: -:-
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="tableScore == null" class="data-null">
+        <p>Đang cập nhật</p>
+      </div>
+    </div>
+
+    <div class="score-table" *ngSwitchCase="'ii'">
+      <div *ngIf="tableScore2 != null">
+        <ion-row class="title-table">
+          <ion-col col-3>
+            Môn
+          </ion-col>
+          <ion-col col-9 class="title-score">
+            <ion-row>
+              <ion-col col-3>
+                KT 15'
+              </ion-col>
+              <ion-col col-3>
+                1 tiết
+              </ion-col>
+              <ion-col col-3>
+                Thi
+              </ion-col>
+              <ion-col col-3>
+                TB môn
+              </ion-col>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+        <div *ngFor="let p of tableScore2">
+          <ion-row class="score-detail" *ngIf="p.chitiet_monhoc">
+            <ion-col col-3 class="subjects">
+              {{p.tenmon}}
+            </ion-col>
+            <ion-col col-9 class="title-score-detail">
+              <ion-row>
+                <ion-col col-3>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs11">{{p.chitiet_monhoc.diem_hs11}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs12">, {{p.chitiet_monhoc.diem_hs12}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs13">, {{p.chitiet_monhoc.diem_hs13}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs14">, {{p.chitiet_monhoc.diem_hs14}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs15">, {{p.chitiet_monhoc.diem_hs15}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs16">, {{p.chitiet_monhoc.diem_hs16}}</span>
+                </ion-col>
+                <ion-col col-3>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs21">{{p.chitiet_monhoc.diem_hs21}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs22">, {{p.chitiet_monhoc.diem_hs22}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs23">, {{p.chitiet_monhoc.diem_hs23}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs24">, {{p.chitiet_monhoc.diem_hs24}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs25">, {{p.chitiet_monhoc.diem_hs25}}</span>
+                  <span *ngIf="p.chitiet_monhoc.diem_hs26">, {{p.chitiet_monhoc.diem_hs26}}</span>
+                </ion-col>
+                <ion-col col-3>
+                  <span>{{p.chitiet_monhoc.diem_hs3}}</span>
+                </ion-col>
+                <ion-col col-3>
+                  {{p.diem_mon}}
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <ion-row class="result">
+          <ion-col col-6 class="">
+            Điểm TB HK: {{avg2 ? avg2.toFixed(1) : '-:-'}}
+          </ion-col>
+          <ion-col col-6 class="hanh-kiem">
+            Hạnh kiểm: Tốt
+          </ion-col>
+          <ion-col col-12 class="xep-loai">
+            Xếp loại học lực: -:-
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="tableScore2 == null" class="data-null">
+        <p>Đang cập nhật</p>
+      </div>
+    </div>
+
+    <div class="score-table" *ngSwitchCase="'all'">
+      <div *ngIf="tableScoreYear != null">
+        <ion-row class="title-table">
+          <ion-col col-3>
+            Môn học
+          </ion-col>
+          <ion-col col-3>
+            TB học kỳ I
+          </ion-col>
+          <ion-col col-3>
+            TB học kỳ II
+          </ion-col>
+          <ion-col col-3>
+            Cả năm
+          </ion-col>
+        </ion-row>
+        <div class="score-detail">
+          <ion-row class="subject" *ngFor="let p of tableScoreYear">
+            <ion-col col-3>
+              {{p.tenmon}}
+            </ion-col>
+            <ion-col col-3>
+              {{p.diemmon[0].diem_mon}}
+            </ion-col>
+            <ion-col col-3>
+              {{p.diemmon.lenght == 2 ? p.diemmon[1].diem_mon : '-:-'}}
+            </ion-col>
+            <ion-col col-3>
+              {{p.diem_trungbinhcong}}
+            </ion-col>
+          </ion-row>
+        </div>
+        <ion-row class="result">
+          <ion-col col-6 class="">
+            TB cả năm: {{avgYear ? avgYear.toFixed(1) : '-:-'}}
+          </ion-col>
+          <ion-col col-6 class="hanh-kiem">
+            Hạnh kiểm: Tốt
+          </ion-col>
+          <ion-col col-12 class="xep-loai">
+            Xếp loại học lực: -:-
+          </ion-col>
+          <ion-col col-12 class="xep-loai">
+            Kết quả cuối năm: -:-
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="tableScoreYear == null" class="data-null">
+        <p>Đang cập nhật</p>
+      </div>
+
+    </div>
+  </div>
+
+
+</ion-content>

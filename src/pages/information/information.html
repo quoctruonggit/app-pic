@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Thông tin cá nhân</ion-title>
+    <ion-buttons end>
+      <button ion-button class="hop-thu" (click)="openHopThu()">
+        <ion-icon name="ios-mail"></ion-icon>
+      </button>
+      <span *ngIf="data.baiviet_chuadoc != 0" class="have-post"></span>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="name-parents">
+    <p>Phụ huynh:
+      <span>{{data.ph_ten}}</span>
+    </p>
+  </div>
+
+  <div class="student" *ngFor="let p of data.list_students">
+    <div class="info">
+      <p class="name-student">Học sinh:
+        <span>{{p.hoten}}</span>
+      </p>
+      <p>Ngày Sinh: {{p.namsinh}}</p>
+      <ion-row>
+        <ion-col col-6>
+          <p>Giới tính: Nam</p>
+        </ion-col>
+        <ion-col col-6>
+          <p>Lớp: {{p.tenlop}}</p>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-row class="action">
+      <ion-col col-4 (click)="openSchedulePage(p.lop)">
+        <p>Thời khóa biểu</p>
+      </ion-col>
+      <ion-col col-4 (click)="openTestCalendarPage(p.hocsinh_id)">
+        <p>Lịch thi</p>
+      </ion-col>
+      <ion-col col-4 (click)="openTableTestScorePage(p.hocsinh_id)">
+        <p>Bảng điểm</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-row class="btn">
+    <ion-col col-6>
+        <button ion-button class="btn-logout" full (click)="doLogout()">Đăng xuất</button>
+    </ion-col>
+    <ion-col col-6>
+        <button ion-button class="btn-change-pass" full (click)="doChangePassword()">Đổi mật khẩu</button>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer>
+  <p>HỆ THỐNG GIÁO DỤC THÁI BÌNH DƯƠNG<br>Pacific College</p>
+</ion-footer>

@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{kyThi != null ? kyThi.ten_kythi : 'Đang cập nhật'}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    
+  <ion-card>
+    <!-- <ion-card-header>
+      Thứ 2, 10/9/2018
+    </ion-card-header> -->
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 style="font-weight: 600; color: #16367b; font-size: 15px;">Ngày thi</ion-col>
+          <ion-col col-4 style="font-weight: 600; color: #16367b; font-size: 15px;">Môn thi</ion-col>
+          <ion-col col-4 style="font-weight: 600; color: #16367b; font-size: 15px;">Phòng thi</ion-col>
+        </ion-row>
+        <!-- <ion-row>
+          <p>Buổi sáng</p>
+        </ion-row> -->
+        <ion-row *ngFor="let p of lichThi">
+          <ion-col col-4>{{p.ngaythi}}</ion-col>
+          <ion-col col-4>{{p.tenmon}}</ion-col>
+          <ion-col col-4>{{p.phonghoc_ten}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <!-- <div class="notes">
+    <p>Lưu ý: <span>abc</span></p>  
+  </div> -->
+  
+     
+</ion-content>

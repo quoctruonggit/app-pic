@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Danh sách phản hồi</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let p of listStudents" (click)="openHopThu(p.id_user_nhan)"  [ngClass]="{'unread': p.trangthai_gui == 0 }">
+      <h2>{{p.tenhocsinh}}</h2>
+      <p>Phụ huynh: {{p.ph_ten}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <p>HỆ THỐNG GIÁO DỤC THÁI BÌNH DƯƠNG<br>Pacific College</p>
+</ion-footer>

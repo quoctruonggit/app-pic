@@ -1,0 +1,85 @@
+page-login {
+    .fixed-content{
+        //background: url(/assets/imgs/BackgroundLogin.png); 
+        //background-size: cover;
+    }
+
+    .scroll-content{
+        background: #16367b !important
+    }
+    .button-md:hover:not(.disable-hover) {
+        background-color: #e8e8e8;
+    }
+    .logo{
+        // height: 30%;
+        // display: -webkit-box;
+        // -webkit-box-align: center;
+        text-align: center;
+        margin: 15% 0;
+        img{
+            height: 150px;
+        }
+    }
+
+    .login-input{
+        margin-bottom: 10px !important;
+        display: block;
+        width: 80%;
+        margin: auto;
+        border: 2px solid #fff;
+        border-radius: 15px;
+        .text-input{
+            width: 100%;
+            color: #fff;
+            input{
+                padding: 10px;
+                margin: 0;
+                color: #fff;
+                //text-transform: lowercase;
+            }
+            ::placeholder{
+                color: #fff;
+            }
+        }
+
+        .input{
+            input{
+                padding: 10px;
+                margin: 0;
+            }
+            ::placeholder{
+                color: #fff;
+            }
+        }
+    }
+    .forgot-pass{
+        margin-bottom: 10px !important;
+        display: block;
+        width: 80%;
+        margin: auto;
+        p{
+            color: #fff;
+            text-align: right;
+        }   
+    }
+
+    .btn-login{
+        .button{
+            background: #e8e8e8;
+            border-radius: 15px;
+            height: 40px;
+            color: #16367b;
+        }
+    }
+
+    .footer{
+        background: #16367b;
+        text-align: center;
+        p{
+            color: #e8e8e8;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+    
+}

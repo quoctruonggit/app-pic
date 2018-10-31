@@ -1,0 +1,340 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lịch làm việc</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-slides #sliderDay pager>
+    <ion-slide *ngFor="let p of lichday">
+      <div class="div-date">
+        <div class="date">
+          <button ion-button icon-only (click)="previous()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+          <span class="name">Thứ {{p.thu}}</span>
+          <button ion-button icon-only (click)="next()">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <ion-scroll scrollY="true" [style.height]="scrollHeight">
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-4 style="font-weight: 600; color: #16367b; font-size: 15px;">Môn học</ion-col>
+                <ion-col col-4 style="font-weight: 600; color: #16367b; font-size: 15px;">Thời gian</ion-col>
+                <ion-col col-4 style="font-weight: 600; color: #16367b; font-size: 15px;">Lớp</ion-col>
+              </ion-row>
+              <ion-row *ngFor="let q of p.lich">
+                <ion-col col-4>{{q.tiet}}</ion-col>
+                <ion-col col-4>{{q.mon}}</ion-col>
+                <ion-col col-4>{{q.lop}}</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-scroll>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+
+<!-- <ion-content>
+  <div>
+    <div class="week">
+      <button ion-button icon-only (click)="previousWeek()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <span class="name">Tuần hiện tại</span>
+      <button ion-button icon-only (click)="nextWeek()">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <ion-slides #sliderDay pager>
+    <ion-slide>
+      <div class="div-date">
+        <div class="date">
+          <button ion-button icon-only (click)="previous()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+          <span class="name">Thứ 2, 10/9/2018</span>
+          <button ion-button icon-only (click)="next()">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <ion-scroll scrollY="true" [style.height]="scrollHeight">
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-2>Tiết</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Môn học</ion-col>
+                    <ion-col col-4>Thời gian</ion-col>
+                    <ion-col col-4>Lớp</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <p>Buổi sáng</p>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>1</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+                
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>2</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>3</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>4</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>5</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <p>Buổi chiều</p>
+              </ion-row>
+
+              <ion-row>
+                <ion-col col-2>6</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>7</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>8</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>9</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>10</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-scroll>
+    </ion-slide>
+    <ion-slide>
+      <div class="div-date">
+        <div class="date">
+          <button ion-button icon-only (click)="previous()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+          <span class="name">Thứ 3, 11/9/2018</span>
+          <button ion-button icon-only (click)="next()">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <ion-scroll scrollY="true" [style.height]="scrollHeight">
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-2>Tiết</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Môn học</ion-col>
+                    <ion-col col-4>Thời gian</ion-col>
+                    <ion-col col-4>Lớp</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <p>Buổi sáng</p>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>1</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+                
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>2</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>3</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>4</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>5</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <p>Buổi chiều</p>
+              </ion-row>
+
+              <ion-row>
+                <ion-col col-2>6</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>7</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>8</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>9</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-2>10</ion-col>
+                <ion-col col-10 class="detail">
+                  <ion-row>
+                    <ion-col col-4>Tiếng ANh</ion-col>
+                    <ion-col col-4>7:00 - 7:45</ion-col>
+                    <ion-col col-4>4A</ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-scroll>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content> -->

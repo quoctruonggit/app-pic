@@ -1,0 +1,93 @@
+page-teacher-detail {
+    .content{
+
+        .grid-avatar{
+            padding: 0;
+            background: #e8e8e8;
+            .col{
+                padding: 0;
+                .div-avatar{
+                    padding: 10px;
+                    height: 90px;
+                }
+                ion-avatar {
+                    .img-avatar{
+                        width: 70px;
+                        height: 70px;
+                        float: left;
+                        border: 3px solid #fff;
+                        object-fit: cover;
+                        vertical-align: top;
+                        border-radius: 50%;
+                    }
+                }
+                p:first-child {
+                    margin-top: 13px;
+                    text-transform: uppercase;
+                    color: #16367b;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                p {
+                    margin: 0px 0px 0px 0px;
+                    color: #767676;
+                }
+            }    
+    
+            .col-name{
+                display: -webkit-box;
+                -webkit-box-align: center;
+                align-items: center;
+                padding: 10px 10px 0 10px;
+                p{
+                    margin: 0 !important;
+                }
+            }
+        }
+        
+
+        .info-teacher{
+            .row{
+                border-bottom: 0.5px solid #fdfdfd;
+                font-size: 15px;
+                padding: 5px 0px;
+                color: #16367b;
+                font-weight: 500;
+            }
+            .local-d{
+                margin-bottom: -5px!important;
+                .col{
+                    background-color: #B2B2B2;
+                    color: #fff;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    padding: 10px 0px !important;
+                    max-width: 95%!important;
+                    margin: 0px auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .div-btn{
+            margin: 10px;
+            .button-ios {
+                border-radius: 0px;
+                height: 2.3em;
+                font-size: 1.6rem;
+                color: #e8e8e8;
+                background-color: #16367b;
+                margin: 0.4rem 0.2rem;
+                padding: 0 1em;
+            }
+        }
+    }
+    .footer{
+        background: #16367b;
+        text-align: center;
+        p{
+            color: #e8e8e8;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+}

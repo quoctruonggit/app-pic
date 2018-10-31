@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Thời khóa biểu</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-slides #sliderDay pager>
+    <ion-slide *ngFor="let p of schedule">
+      <div class="div-date">
+        <div class="date">
+          <button ion-button icon-only (click)="previous()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+          <span class="name">Thứ {{p.thu}}</span>
+          <button ion-button icon-only (click)="next()">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <ion-scroll scrollY="true" [style.height]="scrollHeight">
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-5 style="font-weight: 600; color: #16367b; font-size: 15px;">Tiết</ion-col>
+                <ion-col col-7 style="font-weight: 600; color: #16367b; font-size: 15px;">Môn học</ion-col>                
+              </ion-row> 
+              <ion-row *ngFor="let q of p.lich">
+                <ion-col col-5>{{q.tiet}}</ion-col>
+                <ion-col col-7>{{q.mon}}</ion-col>                
+              </ion-row>      
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-scroll>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- <div class="thoi-khoa-bieu2">
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2 style="font-weight: 600; color: #16367b; font-size: 14px;"></ion-col>
+            <ion-col col-10 style="font-weight: 600; color: #16367b; font-size: 14px;">
+              <ion-row >
+                <ion-col col-2>Thứ 2</ion-col>
+                <ion-col col-2>Thứ 3</ion-col>
+                <ion-col col-2>Thứ 4</ion-col>
+                <ion-col col-2>Thứ 5</ion-col>
+                <ion-col col-2>Thứ 6</ion-col>
+                <ion-col col-2>Thứ 7</ion-col>                
+              </ion-row>
+  
+            </ion-col>                
+          </ion-row> 
+          <ion-row *ngFor="let q of p.lich">
+            <ion-col col-5>{{q.tiet}}</ion-col>
+            <ion-col col-7>{{q.mon}}</ion-col>                
+          </ion-row>      
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div> -->
+  
+</ion-content>

@@ -1,0 +1,112 @@
+page-teacher-work-calendar {
+    .content{
+        .week{
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            padding: 5px 0px;
+            .button{
+                margin: 0;
+                height: 30px;
+                width: 30px;
+                background: #e8e8e8;
+                border-radius: unset;
+                color: #16367b;
+            }
+            .name{
+               //padding: 0px 50px;
+                font-size: 18px;
+            }
+        }
+
+        .slides{
+            height: calc(100% - 40px);
+            .swiper-slide{
+                .slide-zoom {            
+                    position: absolute;
+                    top: 0px;   
+                    .scroll-y{
+                        height: -webkit-fill-available;
+                        .scroll-content{
+                            height: calc(100% - 40px) !important;
+                        }
+                        .scroll-zoom-wrapper{
+                           // height: max-content;
+                        }
+                    }
+                    .div-date{
+                        background: #fff;
+                        .date{
+                            width: max-content;
+                            margin-left: auto;
+                            margin-right: auto;
+                            display: flex;
+                            align-items: center;
+                            border-radius: 5px;
+                            padding: 5px 0px;
+                            .button{
+                                margin: 0;
+                                height: 30px;
+                                width: 30px;
+                                background: #fff;
+                                border-radius: unset;
+                                color: #16367b;
+                            }
+                            .number{
+                                padding: 0px 50px;
+                                font-size: 18px;
+                            }
+                            
+                        }
+                    }
+                    
+
+                    .card{
+                        margin: 0;
+                        width: 100%;
+                        margin-bottom: 5px;
+                        .card-header{
+                            padding: 10px;
+                        }
+                        .card-content{
+                            padding: 0;
+                            .grid{
+                                padding: 0;
+                                .row{
+                                    border-top: 1px solid #ccc;
+                                    .col{
+                                        border-right: 1px solid #ccc;
+                                        
+                                    }
+                                    .detail{
+                                        padding: 0;
+                                        .row{
+                                            border: none;
+                                            .col{
+
+                                            }
+                                        }
+                                    }
+                                    .col:last-child{
+                                        border: none;
+                                    }
+                                    p{
+                                        padding: 5px 10px;
+                                        font-size: 1.6rem;
+                                        font-weight: 500;
+                                        color: #6a93ea;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+    }
+}

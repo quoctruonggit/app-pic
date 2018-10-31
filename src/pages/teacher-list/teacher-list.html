@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    
+    <ion-title>Danh sách giáo viên</ion-title>
+  </ion-navbar>
+  <ion-searchbar [(ngModel)]="keyword" placeholder="Nhập tên giáo viên" (search)="search(keyword)"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item (click)="openTeacherDetail(p.canbo_id)" *ngFor="let p of listTeachers">
+      <!-- <ion-avatar item-start>
+        <img src="assets/imgs/teacher2.jpg">
+      </ion-avatar> -->
+      <h2>{{p.tencanbo}}</h2>
+      <p>Chủ nhiệm: {{p.tenlop ? 'Lớp '+ p.tenlop : 'Không có chủ nhiệm'}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <p>HỆ THỐNG GIÁO DỤC THÁI BÌNH DƯƠNG<br>Pacific College</p>
+</ion-footer>

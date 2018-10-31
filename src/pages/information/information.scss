@@ -1,0 +1,93 @@
+page-information {
+    .header{
+        ion-icon {
+            display: inline-block;
+            font-size: 30px;
+            color: #e8e8e8;
+        }
+        .have-post{
+            height: 10px;
+            width: 10px;
+            background: #ea0404;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            right: 0px;
+        }
+    }
+    .content{
+        .scroll-content{
+            .name-parents{
+                p{
+                    margin: 0px;
+                    font-weight: 500;
+                    padding: 10px;
+                    color: #ea0404;
+                    span{
+
+                    }
+                }
+            }
+            .student{
+                background: #fff;
+                margin-bottom: 10px;
+                .info{
+                    padding: 5px;
+                    p{
+                        margin: 0;
+                        padding: 5px 5px;
+                        color: #5a5a5a;
+                    }
+                    .name-student{
+                        color: #16367b;
+                        font-weight: 500;
+                    }
+                    .col{
+                        padding: 0;
+                    }
+                }
+                .action{
+                    .col{
+                        background: #16367b;
+                        border-right: 1px solid #e8e8e8;
+                        p{
+                            text-align: center;
+                            color: #e8e8e8;
+                            margin: 5px 0;
+                        }
+                    }
+                    .col:last-child{
+                        border: none;
+                    }
+                }
+            }
+
+            .btn{
+                padding: 0 5px;
+                margin-bottom: 10px;
+                .col{
+                    padding: 0 5px;
+                    .button{
+                        margin: 0;
+                        border-radius: 5px;
+                    }
+                    .btn-change-pass{
+                        background: #41734c;
+                    }
+                    .btn-logout{
+                        background: #a23c3c;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        background: #16367b;
+        text-align: center;
+        p{
+            color: #e8e8e8;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+}

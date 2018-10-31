@@ -1,0 +1,47 @@
+page-test-calendar {
+    .content{
+        .card{
+            margin: 0;
+            width: 100%;
+            margin-bottom: 5px;
+            .card-header{
+                padding: 10px;
+                text-align: center;
+            }
+            .card-content{
+                padding: 0;
+                .grid{
+                    padding: 0;
+                    .row{
+                        border-top: 1px solid #ccc;
+                        .col{
+                            border-right: 1px solid #ccc;
+                            text-align: center;
+                        }
+                        .col:last-child{
+                            border: none;
+                        }
+                        p{
+                            padding: 5px 10px;
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            color: #6a93ea;
+                        }
+                    }
+                }
+            }
+        }   
+        .notes{
+            p{
+                margin: 0;
+                padding: 10px;
+                color: red;
+                font-size: 15px;
+                font-weight: 600;
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
